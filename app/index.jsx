@@ -1,22 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Link } from 'expo-router'
+import { Text, View, TouchableOpacity } from 'react-native';
+import React from 'react';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Aora!</Text>
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="text-3xl">Aora!</Text>
       <StatusBar style="auto" />
-      <Link href="/profile" style={{ color: 'blue' }}>Go to Profile</Link>
+      <TouchableOpacity onPress={() => console.log('Navigate to Profile')} className="mt-4">
+        <Text className="text-blue-500">Go to Profile</Text>
+      </TouchableOpacity>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
