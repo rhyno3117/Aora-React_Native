@@ -14,11 +14,17 @@ export default function App() {
             className="w-[130px] h-[84px]"
             resizeMode="contain"
           />
-          <Image 
-          source={images.cards}
-          className="max-w-[380px] w-full h-[300px]"
-          resizeMode="contain"
+          <Image
+            source={images.cards}
+            className="max-w-[380px] w-full h-[300px]"
+            resizeMode="contain"
           />
+          <View className="relative mt-5">
+            <Text className="text-3xl text-white font-bold text-center">
+              Discover Endless Possibilities with {' '}
+              <Text className="text-secondary-200">Aora</Text>
+            </Text>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
