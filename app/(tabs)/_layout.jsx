@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import { Tabs, Redirect } from 'expo-router';
 import { icons } from '../../constants';
 
@@ -7,7 +7,13 @@ const TabIcon = ({ icon, color, name, focused }) => {
     <View>
       <Image
         source={icon}
+        resizeMode="contain"
+        tintColor={color}
+        className="w-6 h-6"
       />
+      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs`}>
+        {name}
+      </Text>
     </View>
   )
 }
@@ -15,7 +21,11 @@ const TabIcon = ({ icon, color, name, focused }) => {
 const TabsLayout = () => {
   return (
     <>
-      <Tabs>
+      <Tabs
+      screenOptions={{
+        tabBarShowLabel: false
+      }}
+      >
         <Tabs.Screen
           name="home"
           options={{
