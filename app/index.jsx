@@ -5,10 +5,10 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-3xl font-pblack">Aora!</Text>
-      <StatusBar style="auto" />
-      <Link href="/home" style={{ color: 'blue' }}>Go to Home</Link>
-    </View>
+    <SafeAreaView className="bg-primary h-full">
+      <ScrollView contentContainerStyle={{ height: '100%' }}>
+
+      </ScrollView>
+    </SafeAreaView>
   );
 }
