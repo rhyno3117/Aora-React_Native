@@ -17,16 +17,17 @@ const SignIn = () => {
           <Image source={images.logo} resizeMode='contain' className='w-[115px] h-[35px]' />
           <Text className="text-2xl text-white text-semibold mt-10 font-psemibold">Log in to Aora</Text>
           <FormField
-            title='Email'
+            title="Email"
             value={form.email}
-            handleChange={(e) => setForm({ ...form, email: e })}
+            handleChangeText={(e) => setForm({ ...form, email: e })}
             otherStyles="mt-7"
             keyboardType="email-address"
           />
+
           <FormField
-            title='Password'
+            title="Password"
             value={form.password}
-            handleChange={(e) => setForm({ ...form, password: e })}
+            handleChangeText={(e) => setForm({ ...form, password: e })}
             otherStyles="mt-7"
           />
         </View>
