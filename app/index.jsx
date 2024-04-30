@@ -11,7 +11,9 @@ import { useGlobalContext } from '../context/GlobalProvider';
 
 
 export default function App() {
-const {isLoading, isLoggedIn} = useGlobalContext();
+  const { isLoading, isLoggedIn } = useGlobalContext();
+
+  if (!isLoading && isLoggedIn) return <Redirect href="/home" />
 
   return (
     <SafeAreaView className="bg-primary h-full">
@@ -39,11 +41,11 @@ const {isLoading, isLoggedIn} = useGlobalContext();
             />
           </View>
           <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
-          Where creativity meets innovation: embark on a journey of limitless exploration with Aora</Text>
-          <CustomButton 
-          title="Continue with Email"
-          handlePress={() => router.push('/sign-in')}
-          containerStyles="w-full mt-7"
+            Where creativity meets innovation: embark on a journey of limitless exploration with Aora</Text>
+          <CustomButton
+            title="Continue with Email"
+            handlePress={() => router.push('/sign-in')}
+            containerStyles="w-full mt-7"
           />
         </View>
       </ScrollView>
