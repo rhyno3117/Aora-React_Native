@@ -8,6 +8,10 @@ const GlobalProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
+        
+    }, []);
+
     return (
         <GlobalContext.Provider
             value={{
