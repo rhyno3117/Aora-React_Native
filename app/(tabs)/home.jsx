@@ -26,10 +26,14 @@ const Home = () => {
               </View>
               <View className='mt-1.5'>
                 <Image
-                
+                  source={images.logoSmall}
+                  className='w-0 h-10'
+                  resizeMode='contain'
                 />
               </View>
             </View>
+
+            
           </View>
         }}
       />
