@@ -20,7 +20,11 @@ const SearchInput = ({ title, value, placeholder, handleChangeText, otherStyles,
             />
 
             <TouchableOpacity>
-                <Image source={icons.search} className="w-5 h-5" resizeMode="contain" />
+                <Image
+                    source={icons.search}
+                    className="w-5 h-5"
+                    resizeMode="contain"
+                />
             </TouchableOpacity>
         </View>
     )
