@@ -2,6 +2,7 @@ import { View, Text, FlatList } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { images } from "../../constants";
+import { SearchInput } from "../../components";
 
 
 const Home = () => {
@@ -33,7 +34,7 @@ const Home = () => {
               </View>
             </View>
 
-            
+            <SearchInput />
           </View>
         }}
       />
