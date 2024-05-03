@@ -19,7 +19,9 @@ const SearchInput = ({ title, value, placeholder, handleChangeText, otherStyles,
                 secureTextEntry={title === 'Password' && !showPassword}
             />
 
-        
+            <TouchableOpacity>
+                <Image source={icons.search} className="w-5 h-5" resizeMode="contain" />
+            </TouchableOpacity>
         </View>
     )
 }
